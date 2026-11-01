@@ -1,0 +1,6 @@
+{
+  "name": "WriteBetter AI",
+  "description": "AI-powered Chrome Extension and writing workbench for English grammar correction, X and LinkedIn post optimization, grounded fact-checking, and double-click English-to-Hindi contextual vocabulary learning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "WriteBetter AI — Writing Assistant, Fact Checker & Hindi Coach",
+  "version": "1.0.0",
+  "description": "Improve English writing on X & LinkedIn, verify factual claims with real sources, and double-click any English word for contextual Hindi meanings.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://www.linkedin.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WriteBetter AI"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

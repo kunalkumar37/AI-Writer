@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WriteBetter AI Popup</title>
+    <style>
+      body {
+        width: 380px;
+        min-height: 480px;
+        margin: 0;
+        padding: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif;
+        background: #ffffff;
+        color: #0f172a;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+      }
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        height: 110px;
+        padding: 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 13px;
+        resize: vertical;
+      }
+      .btn-row {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      button {
+        flex: 1;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #0f172a;
+        background: #0f172a;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #f8fafc;
+        color: #0f172a;
+        border-color: #cbd5e1;
+      }
+      #output {
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <strong>WriteBetter AI</strong>
+      <span style="font-size: 12px; color: #64748b">MV3 Extension</span>
+    </div>
+    <textarea id="draft" placeholder="Paste or write English text for X, LinkedIn, or Fact Check..."></textarea>
+    <div class="btn-row">
+      <button id="enhance-btn">Improve Writing</button>
+      <button id="factcheck-btn" class="secondary">Fact Check</button>
+    </div>
+    <div id="output"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
